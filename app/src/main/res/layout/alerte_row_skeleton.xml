@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="8dp"
+    >
+
+
+    <View
+        android:id="@+id/txtAlertDate"
+        android:layout_width="100dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/light_transparent"
+        android:drawablePadding="5dp"
+        android:gravity="top|left"
+        app:layout_constraintBottom_toTopOf="@+id/txtAlertType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/txtAlertType"
+        android:layout_width="150dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="12dp"
+        android:autoSizeMaxTextSize="12dp"
+        android:autoSizeMinTextSize="8sp"
+        android:background="@color/light_transparent"
+        android:drawableLeft="@drawable/ic_near_me_black_16dp"
+        android:drawablePadding="5dp"
+        android:gravity="bottom|left"
+        android:maxLines="3"
+        android:text="Boulevard de la Terre - Tunis - El Khadra - Gouvernorat de Tunis - TN"
+        android:textColor="@color/grey"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="o" />
+
+
+    <View
+        android:id="@+id/txtAlertAddress"
+        android:layout_width="150dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/light_transparent"
+        app:layout_constraintBottom_toTopOf="@+id/txtAlertSpeed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtAlertDate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/txtAlertSpeed"
+        android:layout_width="150dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="12dp"
+        android:background="@color/light_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtAlertType"
+        app:layout_constraintTop_toBottomOf="@+id/txtDate" />
+
+</android.support.constraint.ConstraintLayout>

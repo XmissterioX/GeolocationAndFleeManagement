@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AlertActivity">
+    <android.support.v7.widget.SearchView
+        android:id="@+id/alertSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:queryHint="Chercher..."
+        app:defaultQueryHint="Chercher..."
+        />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/txtMatriculeAlerts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:textSize="14sp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center"
+        android:weightSum="4">
+        <EditText
+            android:id="@+id/txtDebut"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_date_range_blue_24dp"
+            android:hint="Date debut"/>
+    <Button
+        android:id="@+id/btnDebut"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="Début"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/rounded_button_blue"/>
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Durée maximum : 1 mois"
+            android:textStyle="italic" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center"
+        android:weightSum="4">
+        <EditText
+            android:id="@+id/txtFin"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_date_range_red_24dp"
+            android:hint="Date fin"/>
+    <Button
+        android:id="@+id/btnFin"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="Fin"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/rounded_button_red"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGenererAlerts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Génerer"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+       />
+        <TextView
+            android:id="@+id/txtDateWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date de début doit être inférieure à la date de fin"
+            android:layout_gravity="center"
+            android:textColor="@color/colorBitterSweetDark"
+            android:drawableLeft="@drawable/ic_info_outline_black_24dp"
+            android:drawablePadding="5dp"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aucun résulat"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:padding="5dp"
+        android:paddingTop="10dp"
+        android:id="@+id/alertRecylerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        />
+
+
+
+
+</LinearLayout>

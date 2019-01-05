@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/snackBar"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AlertActivity"
+    >
+<LinearLayout
+    android:id="@+id/linearLayoutTrajectory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/txtMatriculeTrajectory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:textSize="14sp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center"
+        android:weightSum="4">
+        <EditText
+            android:id="@+id/txtDebutTrajectory"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_date_range_blue_24dp"
+            android:hint="Date debut"/>
+        <Button
+            android:id="@+id/btnDebutTrajectory"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Début"
+            android:textColor="@color/colorWhite"
+
+            android:background="@drawable/rounded_button_blue"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center"
+        android:weightSum="4">
+        <EditText
+            android:id="@+id/txtFinTrajectory"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_date_range_red_24dp"
+            android:hint="Date fin"/>
+        <Button
+            android:id="@+id/btnFinTrajectory"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Fin"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/rounded_button_red"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGenererTrajectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Génerer"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        >
+
+    </Button>
+    <TextView
+        android:id="@+id/txtDateWarningTrajectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date de début doit être inférieure à la date de fin"
+        android:layout_gravity="center"
+        android:textColor="@color/colorBitterSweetDark"
+        android:drawableLeft="@drawable/ic_info_outline_black_24dp"
+        android:drawablePadding="5dp"
+        android:visibility="gone"
+        />
+</LinearLayout>
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_gravity="center"
+        android:drawableTop="@drawable/ic_arrow_drop_down_black_24dp"
+        android:textOff=""
+        android:textOn=""
+        android:textSize="0dp"
+        android:id="@+id/toggleButton"
+        android:backgroundTint="@color/colorWhite"
+        android:checked="true"
+        />
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapTrajectory"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrajectoryActivity" />
+</LinearLayout>

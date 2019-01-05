@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"  android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:padding="8dp"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvALL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+
+            >
+
+
+            <TextView
+                android:id="@+id/txtAlertDateALLAlertsROW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_access_time_black_16dp"
+                android:drawablePadding="5dp"
+                android:gravity="top|left"
+                android:text="09-08-2018 07:03:53"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtMatriculeAlertALLAlertsROW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_directions_car_black_16dp"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="7777 TUN 77777"
+                app:layout_constraintBottom_toTopOf="@+id/txtAlertTypeALLAlertsROW"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAlertDateALLAlertsROW" />
+
+            <TextView
+                android:id="@+id/txtAlertTypeALLAlertsROW"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:autoSizeMaxTextSize="12dp"
+                android:autoSizeMinTextSize="10sp"
+                android:drawableLeft="@drawable/ic_warning_yellow_16dp"
+                android:drawablePadding="5dp"
+                android:gravity="bottom|left"
+                android:maxLines="3"
+                android:text="Contact On"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtAlertAddressALLAlertsROW"
+                android:layout_width="100dp"
+                android:layout_height="49dp"
+
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:autoSizeMaxTextSize="12sp"
+                android:autoSizeMinTextSize="8sp"
+                android:drawableLeft="@drawable/ic_near_me_black_16dp"
+                android:drawablePadding="5dp"
+                android:lines="3"
+                android:maxLines="3"
+                android:minLines="2"
+                android:text="zaezaezaezaezaezaezaeaze"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/txtMatriculeAlertALLAlertsROW"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtAlertALLAlertsROW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginTop="24dp"
+                android:text="0 km/h"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAlertAddressALLAlertsROW" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
