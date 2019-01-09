@@ -5,4 +5,4 @@ to manage and to track his fleet behavior. <br />
 Using Android Studio, Java, Google Map <br />
 
 ## Screenshots <h2> tag
-![](https://raw.githubusercontent.com/XmissterioX/GeolocationAndFleeManagement/master/ScreenShots/40399077_420382901699064_580512598680666112_n.png | width=100)
+![](https://github.com/XmissterioX/GeolocationAndFleeManagement/blob/master/ScreenShots/1.png?raw=true | 250x250)
